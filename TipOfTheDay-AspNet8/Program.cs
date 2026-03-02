@@ -1,4 +1,6 @@
-#undef SQLSERVER // use SQL Server if this is #define, use MySQL if it's #undef
+#define SQLITE // use SQLite if this is #define, else use SQLSERVER or MYSQL
+#undef SQLSERVER 
+#undef MYSQL
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using TipOfTheDay.Data;
@@ -7,7 +9,11 @@ using TipOfTheDay.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-#if SQLSERVER 
+#if SQLITE
+var connectionString = builder.Configuration.GetConnectionString("SqliteConnection");
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlite(connectionString));
+#elif SQLSERVER 
 var connectionString = builder.Configuration.GetConnectionString("SqlServerConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
@@ -23,6 +29,12 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    SeedData.Initialize(services);
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
