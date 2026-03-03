@@ -1,21 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.1.32210.238
+# Visual Studio Version 18
+VisualStudioVersion = 18.3.11520.95
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C1401A45-FAEF-411D-88AA-3ACA1E1A393C}"
-	ProjectSection(SolutionItems) = preProject
-		README.md = README.md
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{F03F5454-D031-481A-ABAB-BFFDCFA5FA5E}"
 	ProjectSection(SolutionItems) = preProject
-		Docs\TipOfTheDayDomainER.pdf = Docs\TipOfTheDayDomainER.pdf
-		Docs\TipOfTheDayDomainModel2022.pdf = Docs\TipOfTheDayDomainModel2022.pdf
-		Docs\TipOfTheDayDomainModel2022.uxf = Docs\TipOfTheDayDomainModel2022.uxf
+		README.md = README.md
+		..\TipOfTheDay-AspNetCore3\Docs\TipOfTheDayDomainER.pdf = ..\TipOfTheDay-AspNetCore3\Docs\TipOfTheDayDomainER.pdf
+		..\TipOfTheDay-AspNetCore3\Docs\TipOfTheDayDomainModel2022.pdf = ..\TipOfTheDay-AspNetCore3\Docs\TipOfTheDayDomainModel2022.pdf
+		..\TipOfTheDay-AspNetCore3\Docs\TipOfTheDayDomainModel2022.uxf = ..\TipOfTheDay-AspNetCore3\Docs\TipOfTheDayDomainModel2022.uxf
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TipOfTheDay", "TipOfTheDay\TipOfTheDay.csproj", "{AE67B9DE-E307-4ACF-81FD-E1BEB9588F8F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TipOfTheDay", "TipOfTheDay\TipOfTheDay.csproj", "{0A805334-F91A-409B-CE79-777821E30107}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +21,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AE67B9DE-E307-4ACF-81FD-E1BEB9588F8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AE67B9DE-E307-4ACF-81FD-E1BEB9588F8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AE67B9DE-E307-4ACF-81FD-E1BEB9588F8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AE67B9DE-E307-4ACF-81FD-E1BEB9588F8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A805334-F91A-409B-CE79-777821E30107}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A805334-F91A-409B-CE79-777821E30107}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A805334-F91A-409B-CE79-777821E30107}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A805334-F91A-409B-CE79-777821E30107}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
